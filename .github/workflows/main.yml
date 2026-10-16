@@ -1,5 +1,4 @@
 name: First Workflow
-
 on: 
   push: 
      branches: 
@@ -11,5 +10,8 @@ jobs:
        steps:
          - name: Print A welcome message 
            run: echo "Welcome To our first github action workflow"
-           
+         - name: Checkout Repository
+           uses: actions/checkout@v4.2.2
+         - name: List Repository Files
+           run: ls -la
          
